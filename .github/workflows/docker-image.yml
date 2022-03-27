@@ -33,8 +33,8 @@ jobs:  # workflow中的job
       - name: Build and push Docker image
         uses: docker/build-push-action@v2 # docker build & push
         with:
-          context: .
-          file: ./mysit/Dockerfile
+          context: ./mysit
+          # file: ./mysit/Dockerfile
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           # tags: ${{ secrets.DOCKER_HUB_USERNAME }}/rab_python_packages:latest
