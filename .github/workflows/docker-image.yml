@@ -36,6 +36,6 @@ jobs:  # workflow中的job
           context: ./mysit
           # file: ./mysit/Dockerfile
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
-          # tags: ${{ secrets.DOCKER_HUB_USERNAME }}/rab_python_packages:latest
+          # tags: ${{ steps.meta.outputs.tags }}
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/mysit:latest
           labels: ${{ steps.meta.outputs.labels }}
