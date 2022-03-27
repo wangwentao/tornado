@@ -37,5 +37,5 @@ jobs:  # workflow中的job
           # file: ./mysit/Dockerfile
           push: true
           # tags: ${{ steps.meta.outputs.tags }}
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/mysit:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/mysit:latest
           labels: ${{ steps.meta.outputs.labels }}
