@@ -28,7 +28,7 @@ jobs:  # workflow中的job
         id: meta
         uses: docker/metadata-action@v3  # 抽取项目信息，主要是镜像的tag
         with:
-          images: wentao/mysit
+          images: wentao2022/mysit
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v2 # docker build & push
@@ -36,6 +36,6 @@ jobs:  # workflow中的job
           context: ./mysit
           # file: ./mysit/Dockerfile
           push: true
-          # tags: ${{ steps.meta.outputs.tags }}
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/mysit:latest
+          tags: ${{ steps.meta.outputs.tags }}
+          # tags: ${{ secrets.DOCKERHUB_USERNAME }}/mysit:latest
           labels: ${{ steps.meta.outputs.labels }}
